@@ -5,6 +5,11 @@ import org.testng.annotations.Test;
 
 public class CreateReminderTests extends TestBase {
 
+    @BeforeMethod
+    public void precondition() {
+        app.getMainScreen().confirm();
+    }
+
     @Test
     public void addReminderPositiveTest() {
         //tap on add reminder
