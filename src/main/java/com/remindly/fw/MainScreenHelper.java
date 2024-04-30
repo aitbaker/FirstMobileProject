@@ -10,6 +10,10 @@ public class MainScreenHelper extends BaseHelper{
         super(driver);
     }
 
+    public void confirm() {
+        tap(By.id("android:id/button1"));
+    }
+
     public boolean isMainScreenMessagePresent() {
         return isElementPresent(By.id("no_reminder_text"));
     }
