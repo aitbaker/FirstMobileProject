@@ -11,12 +11,17 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class ReminderHelper extends BaseHelper{
+    
     public ReminderHelper(AppiumDriver driver) {
         super(driver);
     }
 
     public void enterTitle(String text) {
         type(By.id("reminder_title"),text);
+    }
+
+    public void saveReminder() {
+        tap(By.id("save_reminder"));
     }
 
     public void tapOnDateField() {
@@ -114,10 +119,6 @@ public class ReminderHelper extends BaseHelper{
 
     public void tapOnRepetitionField() {
         tap(By.id("RepeatType"));
-    }
-
-    public void saveReminder() {
-        tap(By.id("save_reminder"));
     }
 
     public String isRepeatOffTextPresent() {
