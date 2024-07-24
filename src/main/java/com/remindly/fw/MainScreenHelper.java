@@ -6,27 +6,32 @@ import org.openqa.selenium.By;
 import java.util.Collection;
 
 public class MainScreenHelper extends BaseHelper{
+    
     public MainScreenHelper(AppiumDriver driver) {
         super(driver);
+    }
+
+    public boolean isNoReminderTextPresent() {
+        return isElementPresent(By.id("no_reminder_text"));
     }
 
     public void confirm() {
         tap(By.id("android:id/button1"));
     }
 
-    public boolean isMainScreenMessagePresent() {
-        return isElementPresent(By.id("no_reminder_text"));
-    }
-
-    public void tapOnAddReminderButton() {
+    public void tapOnAddReminder() {
         tap(By.id("add_reminder"));
     }
 
     public String isReminderTitlePresent() {
-        String text = driver.findElement(By.id("recycle_title")).getText();
-        return text;
+        return isTextPresent(By.id("recycle_title"));
     }
 
-    public String isReminderDatePresent() {
-        return driver.findElement(By.id("recycle_date_time")).getText();    }
+    public String isReminderDateTimePresent() {
+        return isTextPresent(By.id("recycle_date_time"));
+    }
+
+    public String isRepetitionsTypeTextPresent() {
+        return isTextPresent(By.id("recycle_repeat_info"));
+    }
 }
