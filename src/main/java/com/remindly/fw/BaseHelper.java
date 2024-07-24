@@ -29,8 +29,8 @@ public class BaseHelper {
         driver.hideKeyboard();
     }
 
-    public boolean isElementPresent(By locator) {
-        return driver.findElements(locator).size() > 0;
+    public String isTextPresent(By text) {
+        return driver.findElement(text).getText();
     }
 
     public void swipe(double start, double stop) {
