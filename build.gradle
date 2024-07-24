@@ -10,8 +10,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.appium:java-client:7.6.0'
-    implementation 'org.testng:testng:7.9.0'
+    implementation 'io.appium:java-client:9.2.2'(последняя версия, где этот код работает)
+    implementation 'org.testng:testng:7.10.2'
 
     compileOnly 'org.projectlombok:lombok:1.18.16'
     annotationProcessor 'org.projectlombok:lombok:1.18.16'
